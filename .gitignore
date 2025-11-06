@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Generated summaries and logs
+summaries/
+logs/
+*.log
+
+# System files
+.DS_Store
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.temp
+

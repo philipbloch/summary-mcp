@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- Label: Unique identifier for this job -->
+    <key>Label</key>
+    <string>com.philipbloch.dailysummary</string>
+    
+    <!-- Program to run -->
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/philipbloch/shopify-projects/summary-mcp/scripts/generate-daily-summary.sh</string>
+    </array>
+    
+    <!-- Working Directory -->
+    <key>WorkingDirectory</key>
+    <string>/Users/philipbloch/shopify-projects/summary-mcp</string>
+    
+    <!-- Schedule: Monday-Friday at 8:30 AM PT -->
+    <key>StartCalendarInterval</key>
+    <array>
+        <!-- Monday -->
+        <dict>
+            <key>Weekday</key>
+            <integer>1</integer>
+            <key>Hour</key>
+            <integer>8</integer>
+            <key>Minute</key>
+            <integer>30</integer>
+        </dict>
+        <!-- Tuesday -->
+        <dict>
+            <key>Weekday</key>
+            <integer>2</integer>
+            <key>Hour</key>
+            <integer>8</integer>
+            <key>Minute</key>
+            <integer>30</integer>
+        </dict>
+        <!-- Wednesday -->
+        <dict>
+            <key>Weekday</key>
+            <integer>3</integer>
+            <key>Hour</key>
+            <integer>8</integer>
+            <key>Minute</key>
+            <integer>30</integer>
+        </dict>
+        <!-- Thursday -->
+        <dict>
+            <key>Weekday</key>
+            <integer>4</integer>
+            <key>Hour</key>
+            <integer>8</integer>
+            <key>Minute</key>
+            <integer>30</integer>
+        </dict>
+        <!-- Friday -->
+        <dict>
+            <key>Weekday</key>
+            <integer>5</integer>
+            <key>Hour</key>
+            <integer>8</integer>
+            <key>Minute</key>
+            <integer>30</integer>
+        </dict>
+    </array>
+    
+    <!-- Run at load (optional - for testing) -->
+    <key>RunAtLoad</key>
+    <false/>
+    
+    <!-- Standard output and error logs -->
+    <key>StandardOutPath</key>
+    <string>/Users/philipbloch/shopify-projects/summary-mcp/logs/launchd-daily.out.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/philipbloch/shopify-projects/summary-mcp/logs/launchd-daily.err.log</string>
+    
+    <!-- Environment variables -->
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+    </dict>
+    
+    <!-- Keep the job alive if it exits -->
+    <key>KeepAlive</key>
+    <false/>
+    
+    <!-- Throttle interval: Prevent rapid restarts -->
+    <key>ThrottleInterval</key>
+    <integer>300</integer>
+</dict>
+</plist>
+

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- Label: Unique identifier for this job -->
+    <key>Label</key>
+    <string>com.philipbloch.weeklysummary</string>
+    
+    <!-- Program to run -->
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/philipbloch/shopify-projects/summary-mcp/scripts/generate-weekly-summary.sh</string>
+    </array>
+    
+    <!-- Working Directory -->
+    <key>WorkingDirectory</key>
+    <string>/Users/philipbloch/shopify-projects/summary-mcp</string>
+    
+    <!-- Schedule: Every Monday at 9:00 AM PT -->
+    <!-- Note: launchd uses local time, so adjust for PT timezone -->
+    <key>StartCalendarInterval</key>
+    <dict>
+        <!-- Weekday: 1=Monday, 2=Tuesday, etc. -->
+        <key>Weekday</key>
+        <integer>1</integer>
+        <!-- Hour: 9 AM -->
+        <key>Hour</key>
+        <integer>9</integer>
+        <!-- Minute: 00 -->
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+    
+    <!-- Run at load (optional - for testing) -->
+    <!-- Remove or set to false in production -->
+    <key>RunAtLoad</key>
+    <false/>
+    
+    <!-- Standard output and error logs -->
+    <key>StandardOutPath</key>
+    <string>/Users/philipbloch/shopify-projects/summary-mcp/logs/launchd-weekly.out.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/philipbloch/shopify-projects/summary-mcp/logs/launchd-weekly.err.log</string>
+    
+    <!-- Environment variables -->
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+    </dict>
+    
+    <!-- Keep the job alive if it exits -->
+    <key>KeepAlive</key>
+    <false/>
+    
+    <!-- Throttle interval: Prevent rapid restarts -->
+    <key>ThrottleInterval</key>
+    <integer>300</integer>
+</dict>
+</plist>
+
