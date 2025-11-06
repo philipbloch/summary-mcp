@@ -12,6 +12,7 @@ An MCP (Model Context Protocol) server that provides comprehensive productivity 
 - **📈 Period Comparison**: Compare productivity across different weeks
 - **📁 File Management**: List and retrieve past summaries
 - **🤖 Automated Generation**: Scheduled daily (Mon-Fri 8:30 AM) and weekly (Mon 9:00 AM) summaries
+- **🚫 Smart Filtering**: Automatically excludes personal conversations (sports, politics, entertainment)
 
 ## 🚀 Quick Start
 
@@ -243,6 +244,16 @@ The MCP server integrates with:
 1. **Slack MCP**: Messages, threads, reactions
 2. **Google Calendar**: Events, attendees, meeting duration
 3. **Gmail**: Emails, threads, important contacts
+
+## 🚫 Content Filtering
+
+By default, Summary MCP filters out personal conversations about sports, politics, and entertainment to keep your summaries focused on work.
+
+- **Enabled by default** - Only work-related content in summaries
+- **Easily toggle** - Set `CONTENT_FILTERING_ENABLED=false` in `.env` to disable
+- **Customizable** - Add your own keywords and topics to filter
+
+See [FILTERING.md](./FILTERING.md) for complete documentation.
 
 ## 🎨 Output Formats
 

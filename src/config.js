@@ -42,6 +42,50 @@ export const config = {
     gmail: process.env.GMAIL_MCP_SERVER || 'gworkspace-mcp',
   },
 
+  // Content filtering rules
+  filtering: {
+    // Exclude personal conversations about these topics
+    excludeTopics: [
+      'sports',
+      'political discussions',
+      'politics',
+      'elections',
+      'cultural debates',
+      'religion',
+      'personal beliefs',
+      'entertainment',
+      'movies',
+      'TV shows',
+      'gaming',
+      'personal opinions on social issues',
+    ],
+    // Keywords that indicate personal/off-topic conversations
+    excludeKeywords: [
+      'democrat',
+      'republican',
+      'conservative',
+      'liberal',
+      'election',
+      'trump',
+      'biden',
+      'political',
+      'communist',
+      'socialism',
+      'football',
+      'basketball',
+      'baseball',
+      'hockey',
+      'sports team',
+      'game score',
+      'movie',
+      'tv show',
+      'netflix',
+      'religion',
+      'religious',
+    ],
+    enabled: process.env.CONTENT_FILTERING_ENABLED !== 'false',
+  },
+
   // Debug mode
   debug: process.env.DEBUG === 'true',
 
