@@ -4,6 +4,10 @@
 
 An MCP (Model Context Protocol) server that provides comprehensive productivity summaries by analyzing your Slack messages, Calendar events, and Gmail activity.
 
+<a href="https://glama.ai/mcp/servers/@philipbloch/summary-mcp">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@philipbloch/summary-mcp/badge" alt="Summary MCP server" />
+</a>
+
 ## 🌟 Features
 
 - **📅 Daily Summaries**: Concise end-of-day wrap-ups with tomorrow's preview
